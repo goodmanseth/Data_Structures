@@ -69,6 +69,5 @@ public class LinkedQueue <E> implements Queue <E> {
 			System.out.print("\n");
 		}		
 	}
-
 	
 }

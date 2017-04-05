@@ -3,9 +3,9 @@ package ds.queue;
 public class QueueImplement {
 	
 	public static void main(String[] args) {
-		QueueArray newQueue = new QueueArray(5);
+		LinkedQueue newQueue = new LinkedQueue();
 		int i = 0;
-		while (!newQueue.isFull()){
+		while (i < 5){
 			newQueue.enqueue(i++);
 			newQueue.display();
 			System.out.printf("%d\n", newQueue.getSize());
