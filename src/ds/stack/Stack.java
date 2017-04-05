@@ -35,6 +35,4 @@ public interface Stack <E> {
 	 */
 	void display();
 	
-
-	
 }
