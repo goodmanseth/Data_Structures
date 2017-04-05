@@ -11,7 +11,6 @@ import java.util.*;
  *
  * @param <E>
  */
-
 public class StackArray <E> implements Stack <E> {
 	
 	private int maxSize;
