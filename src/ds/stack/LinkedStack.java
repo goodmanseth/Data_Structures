@@ -11,6 +11,8 @@ import java.util.*;
  * @param <E>
  */
 public class LinkedStack <E> implements Stack <E> {
+	private Node top;
+	private int size;
 	
 	private class Node {
 		public E data;
@@ -20,9 +22,11 @@ public class LinkedStack <E> implements Stack <E> {
 			this.next = next;
 		}
 	}
-	
-	private Node top = null;
-	private int size = 0;
+
+	public LinkedStack() {
+		top = null;
+		size = 0;
+	}
 
 	public void push(E item) {
 		top = new Node(item,top);
@@ -37,6 +41,7 @@ public class LinkedStack <E> implements Stack <E> {
 			Node temp = top.next;
 			top = null;
 			top = temp;
+			temp = null;
 			size--;
 			return currData;
 		}

@@ -3,7 +3,7 @@ package ds.stack;
 public class StackImplement {
 	
 	public static void main(String[] args) {
-		Stack<Integer> newStack = new LinkedStack<Integer>();
+		LinkedStack<Integer> newStack = new LinkedStack<Integer>();
 		int i = 0;
 		while (i < 5) {
 			newStack.push(i++);

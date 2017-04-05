@@ -1,6 +1,12 @@
 package ds.queue;
 
+import java.util.*;
+
 public class LinkedQueue <E> implements Queue <E> {
+	private Node first;
+	private Node last;
+	private int size;
+	
 	private class Node {
 		public E data;
 		public Node next;
@@ -10,42 +16,58 @@ public class LinkedQueue <E> implements Queue <E> {
 		}
 	}
 	
-	public Node front = null;
-	private int size = 0;
+	public LinkedQueue() {
+		first = null;
+		last = null;
+		size = 0;
+	}
 
-	@Override
 	public void enqueue(E item) {
-		
+		Node temp = last;
+		last = new Node(item, null);
+		if (isEmpty()) {
+			first = last;
+		} else {
+			temp.next = last;
+		}
+		size++;
 	}
 
-	@Override
 	public E dequeue() {
-		// TODO Auto-generated method stub
-		return null;
+		if (isEmpty()){
+			throw new NoSuchElementException("Underflow Exception");
+		} else {
+			E currData = first.data;
+			first = first.next;
+			size--;
+			return currData;
+		}
 	}
 
-	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return (size == 0);
 	}
 
-	@Override
 	public int getSize() {
-		// TODO Auto-generated method stub
-		return 0;
+		return size;
 	}
 
-	@Override
 	public E peek() {
-		// TODO Auto-generated method stub
-		return null;
+		return first.data;
 	}
 
-	@Override
 	public void display() {
-		// TODO Auto-generated method stub
-		
+		if (isEmpty()) {
+			System.out.println("The queue is empty.");
+		} else {
+			System.out.print("Queue: (first -> last)");
+			Node curr = first;
+			while (curr != null) {
+				System.out.print(" " + curr.data);
+				curr = curr.next;
+			}
+			System.out.print("\n");
+		}		
 	}
 
 	
