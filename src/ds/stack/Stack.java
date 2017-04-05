@@ -1,5 +1,15 @@
 package ds.stack;
 
+/**
+ * This is a stack interface, to be used with two stack classes - a bounded
+ * stack and a singly-linked stack. The user can push and pop items to and 
+ * off the stack, as well as peek at the top element, determine if the stack
+ * is empty, get the size of the stack, and display the stack in the console.
+ * 
+ * @author Seth Goodman
+ *
+ * @param <E>
+ */
 public interface Stack <E> {
 	
 	/**

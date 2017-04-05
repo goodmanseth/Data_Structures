@@ -1,5 +1,15 @@
 package ds.queue;
 
+/**
+ * This is a queue interface, to be used with two queue classes - a bounded
+ * queue and a singly-linked queue. The user can enqueue and dequeue items to and 
+ * from the queue, as well as peek at the first element, determine if the queue
+ * is empty, get the size of the queue, and display the queue in the console.
+ * 
+ * @author Seth Goodman
+ *
+ * @param <E>
+ */
 public interface Queue <E> {
 	
 	/**

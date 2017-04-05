@@ -2,6 +2,15 @@ package ds.queue;
 
 import java.util.*;
 
+/**
+ * This class is my implementation of a bounded queue, with the size of the queue array 
+ * inputed at the creation of the queue. Since the queue is bounded, there is a new
+ * isFull() function, which returns a boolean determining if the queue is full.
+ * 
+ * @author Seth Goodman
+ *
+ * @param <E>
+ */
 public class QueueArray <E> implements Queue <E> {
 	
 	private int maxSize;

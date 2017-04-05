@@ -2,6 +2,16 @@ package ds.stack;
 
 import java.util.*;
 
+/**
+ * This class is my implementation of a bounded stack, with the size of the stack array
+ * inputed at the creation of the stack. Since the stack is bounded, there is a new
+ * isFull() function, which returns a boolean determining if the stack is full.
+ * 
+ * @author Seth Goodman
+ *
+ * @param <E>
+ */
+
 public class StackArray <E> implements Stack <E> {
 	
 	private int maxSize;

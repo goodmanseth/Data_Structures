@@ -2,6 +2,14 @@ package ds.stack;
 
 import java.util.*;
 
+/**
+ * This class is my implementation of a linked stack. Since a singly-linked list is used
+ * instead of an array, the size of the stack changes dynamically.
+ * 
+ * @author Seth Goodman
+ *
+ * @param <E>
+ */
 public class LinkedStack <E> implements Stack <E> {
 	
 	private class Node {
